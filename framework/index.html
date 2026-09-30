@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Framework - Vue</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>📚 Meus Estudos</h1>
+
+        <input
+            v-model="novoEstudo"
+            placeholder="Digite algo para estudar"
+        >
+
+        <button @click="adicionar">
+            Adicionar
+        </button>
+
+        <button @click="ordenar">
+            Ordenar A-Z
+        </button>
+
+        <ul>
+
+            <li v-for="estudo in estudos">
+
+                {{ estudo }}
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

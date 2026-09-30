@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+}
+
+body > div,
+body {
+    padding: 20px;
+}
+
+#app,
+body:not(:has(#app)) {
+    width: 100%;
+}
+
+#app,
+body > h1,
+body > input,
+body > button,
+body > ul {
+    position: relative;
+}
+
+#app {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 35px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Título */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 32px;
+    color: #f8fafc;
+}
+
+/* Input */
+
+input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin-bottom: 15px;
+
+    border: 2px solid #334155;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    background: #0f172a;
+    color: #f8fafc;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+input:focus {
+    border-color: #38bdf8;
+
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+/* Botões */
+
+button {
+    padding: 12px 18px;
+
+    margin-right: 8px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #7dd3fc;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Lista */
+
+ul {
+    padding: 0;
+    margin: 10px 0 0;
+
+    list-style: none;
+}
+
+li {
+    padding: 14px 16px;
+
+    margin-bottom: 10px;
+
+    background: #0f172a;
+
+    border: 1px solid #334155;
+    border-left: 4px solid #38bdf8;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    transition: 0.2s;
+}
+
+li:hover {
+    transform: translateX(5px);
+
+    border-color: #38bdf8;
+}
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    #app {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
